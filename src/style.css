@@ -26,8 +26,11 @@ input{
     width: 40%;
     padding: 8px;
     font-size: 1rem;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid gray;
 }
-.submit-marks{
+button{
     padding: 10px 15px;
     font-size: 1rem;
     background-color: rgb(1, 112, 1);
@@ -35,4 +38,13 @@ input{
     border: none;
     border-radius: 4px;
     cursor: pointer;
+}
+
+.student-grade-generator{
+    margin-bottom: 50px;
+}
+
+/* =========================Speed detector ==================== */
+.speed-button{
+    background-color: rgba(197, 24, 24, 0.712);
 }

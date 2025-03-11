@@ -31,9 +31,9 @@ function gradeGenerator(){
 
     else {
         displayGrade.textContent = `Invalid input`
-        displayGrade.style.color = "red";
+        displayGrade.style.color = "rgba(197, 24, 24, 0.712)";
         displayGrade.style.fontSize = "0.9rem"
-        input.style.borderColor = "red"
+        inputElement.style.borderColor = "rgba(197, 24, 24, 0.712)"
     }
 
     inputElement.value = ""

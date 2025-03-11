@@ -18,7 +18,8 @@ function speedDetector(speed){
         const demeritPoints = Math.floor((speed -speedLimit) / 5);
 
         if(demeritPoints > maxDemeritPoints){
-            displayPoints.textContent = "License suspended"
+            displayPoints.textContent = "License suspended";
+            speedInput.style.borderColor = "rgba(197, 24, 24, 0.712)"
             displayPoints.style.color = "rgba(197, 24, 24, 0.712)"
         }
         else{

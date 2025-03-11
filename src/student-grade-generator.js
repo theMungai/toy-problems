@@ -1,9 +1,9 @@
-const input = document.querySelector(".student-marks");
+const inputElement = document.querySelector(".student-marks");
 const submit = document.querySelector(".submit-marks");
 const displayGrade = document.querySelector(".display-grade");
 
 function gradeGenerator(){
-    let marks = input.value
+    let marks = inputElement.value
 
     if(marks > 79 && marks <= 100){
         displayGrade.textContent = `Your grade is : A`
@@ -36,16 +36,17 @@ function gradeGenerator(){
         input.style.borderColor = "red"
     }
 
-    input.value = ""
+    inputElement.value = ""
+
 }
+// Input eventListener
+inputElement.addEventListener("keydown", (event) => {
+    if(event.key === "Enter"){
+        gradeGenerator()
+    }
+})
 
 submit.addEventListener("click", () => {
     gradeGenerator()
 })
 
-// Input eventListener
-input.addEventListener("keydown", (event) => {
-    if(event.key === "Enter"){
-        gradeGenerator()
-    }
-})

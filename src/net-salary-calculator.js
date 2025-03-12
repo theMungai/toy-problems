@@ -48,6 +48,7 @@ function calculateNet(gross){
 
         <p>Your Net Salary is KSh.${netSalary.toFixed(0)}</p>
     ` 
+    salaryInput.value = ""
 }
 
 calculateNetBtn.addEventListener("click", () => {

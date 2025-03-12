@@ -41,16 +41,22 @@ function calculateNet(gross){
     let netSalary = gross - totalDeductions;
 
     messageContainer.innerHTML = `
-        <p> Your Housing Levy contribution is : KSh.${houseLevy}</p>
-        <p>Your NSSF contribution is : KSh.${NSSF}</p>
-        <p>Your SHA contribution is : KSh.${SHA}</p>
-        <p>Your Monthly PAYE is : KSh.${paye}</p>
+        <p> Your Housing Levy contribution is : KSh.${houseLevy.toFixed(2)}</p>
+        <p>Your NSSF contribution is : KSh.${NSSF.toFixed(2)}</p>
+        <p>Your SHA contribution is : KSh.${SHA.toFixed(2)}</p>
+        <p>Your Monthly PAYE is : KSh.${paye.toFixed(2)}</p>
 
-        <p>Your Net Salary is KSh.${netSalary.toFixed(0)}</p>
+        <p>Your Net Salary is KSh.${netSalary.toFixed(2)}</p>
     ` 
     salaryInput.value = ""
 }
 
 calculateNetBtn.addEventListener("click", () => {
     calculateNet(salaryInput.value)
+})
+
+salaryInput.addEventListener("keydown", (event) => {
+    if(event.key === "Enter"){
+        calculateNet(salaryInput.value)
+    }
 })

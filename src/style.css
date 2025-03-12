@@ -40,11 +40,21 @@ button{
     cursor: pointer;
 }
 
-.student-grade-generator{
-    margin-bottom: 80px;
-}
 
 /* =========================Speed detector ==================== */
+
+.speed-detector{
+    margin: 100px 0px;
+}
 .speed-button{
     background-color: rgba(197, 24, 24, 0.712);
+}
+
+/* ====================== Net Salary calculator ================== */
+.calculate-net-salary{
+    background-color: rgba(29, 72, 211, 0.911);
+}
+
+.salary-message p{
+    padding: 10px 0px;
 }
